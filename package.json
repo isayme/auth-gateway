@@ -4,6 +4,8 @@
   "description": "",
   "main": "app/app.js",
   "scripts": {
+    "start": "node app/app.js",
+    "dev": "NODE_ENV=dev nodemon app/app.js",
     "test": "mocha"
   },
   "repository": {
@@ -15,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/nomorepass/auth-gateway/issues"
   },
-  "homepage": "https://github.com/nomorepass/auth-gateway#readme"
+  "homepage": "https://github.com/nomorepass/auth-gateway#readme",
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "config": "^1.30.0",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "nodemon": "^1.17.3",
+    "pino": "^4.16.1",
+    "pino-debug": "^1.1.1"
+  }
 }
