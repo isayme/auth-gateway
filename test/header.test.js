@@ -6,8 +6,7 @@ const testUtil = require('test/util')
 
 describe('X-Accel-Redirect', () => {
   it('should have accel redirect header', async () => {
-    let res = await request(app)
-      .get('/')
+    let res = await request(app).get('/')
 
     assert.equal(res.statusCode, 101)
     assert.equal(res.get(HeaderAccelRedirect), '@accel')
