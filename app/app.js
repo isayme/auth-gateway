@@ -8,7 +8,8 @@ const pkg = require('../package')
 const debug = require('debug')('auth:gateway')
 const tokenUtil = require('app/token')
 const { asyncWrap } = require('app/util')
-const { HeaderViewerId } = require('app/constants')
+const { HeaderAccelRedirect, HeaderViewerId } = require('app/constants')
+const UnauthorizedError = require('app/error/unauthorized')
 const logger = require('app/logger')
 
 const app = express()
@@ -31,7 +32,12 @@ async function parseAuth (req, res) {
         const decoded = await tokenUtil.verify(token, secrets[i])
         debug(decoded)
 
-        const viewrId = decoded._userId
+        const viewrId = decoded.uid
+
+        if (!viewrId) {
+          throw new UnauthorizedError('uid not exist in decoded info')
+        }
+
         res.setHeader(HeaderViewerId, viewrId)
         break
       } catch (err) {
@@ -41,12 +47,12 @@ async function parseAuth (req, res) {
     }
 
     if (error) {
-      throw error
+      throw new UnauthorizedError(`${error.name}: ${error.message}`)
     }
   }
 
   debug('set accel to @accel')
-  res.setHeader('X-Accel-Redirect', '@accel')
+  res.setHeader(HeaderAccelRedirect, '@accel')
   res.status(101)
   res.end()
 }
@@ -60,3 +66,5 @@ const server = app.listen(port, () => {
   const address = server.address()
   logger.info(`${pkg.name}:${pkg.version} listening ${address.port} ...`)
 })
+
+module.exports = app

@@ -4,7 +4,7 @@ const UnauthorizedError = require('app/error/unauthorized')
 
 // get token from header
 function getFromHeader (req) {
-  const value = req.getHeader(HeaderAccessToken)
+  const value = req.get(HeaderAccessToken)
   if (value) {
     const parts = value.split(' ')
     if (parts.length !== 2) {

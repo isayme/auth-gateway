@@ -2,17 +2,11 @@ class UnauthorizedError extends Error {
   constructor (message) {
     super()
 
-    if (message) {
-      this.message = message
-    }
+    this.message = message || 'unauthorized request.'
   }
 
   get status () {
     return 401
-  }
-
-  get message () {
-    return 'unauthorized request.'
   }
 
   get name () {
