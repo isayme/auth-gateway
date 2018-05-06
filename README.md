@@ -5,7 +5,7 @@ A service that will handle auth issues.
 [![Coverage Status](https://coveralls.io/repos/github/nomorepass/auth-gateway/badge.svg?branch=master)](https://coveralls.io/github/nomorepass/auth-gateway?branch=master)
 
 ## Usage
-![arch](./usage.png)
+![arch](./doc/usage.png)
 
 ### Nginx Config Example
 ```
