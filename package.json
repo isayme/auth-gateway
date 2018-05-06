@@ -4,8 +4,8 @@
   "description": "",
   "main": "app/app.js",
   "scripts": {
-    "start": "node -r pino-debug app/app.js",
-    "dev": "NODE_ENV=dev nodemon -r pino-debug app/app.js",
+    "start": "node app/app.js",
+    "dev": "NODE_ENV=dev nodemon app/app.js",
     "test": "NODE_ENV=test nyc mocha ./test/**/*.test.js",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard",
@@ -28,8 +28,7 @@
     "express": "^4.16.3",
     "jsonwebtoken": "^8.2.1",
     "lodash": "^4.17.10",
-    "pino": "^4.16.1",
-    "pino-debug": "^1.1.1"
+    "pino": "^4.16.1"
   },
   "devDependencies": {
     "coveralls": "^3.0.1",
