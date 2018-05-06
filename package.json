@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node -r pino-debug app/app.js",
     "dev": "NODE_ENV=dev nodemon -r pino-debug app/app.js",
-    "test": "mocha"
+    "test": "mocha",
+    "lint": "standard",
+    "prettier": "prettier-standard 'app/**/*.js' 'test/**/*.js' 'config/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,14 @@
     "nodemon": "^1.17.3",
     "pino": "^4.16.1",
     "pino-debug": "^1.1.1"
+  },
+  "devDependencies": {
+    "prettier-standard": "^8.0.1",
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
   }
 }

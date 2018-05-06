@@ -8,7 +8,9 @@ function getFromHeader (req) {
   if (value) {
     const parts = value.split(' ')
     if (parts.length !== 2) {
-      throw new UnauthorizedError('authorization fromat invalid: Bearer [token]')
+      throw new UnauthorizedError(
+        'authorization fromat invalid: Bearer [token]'
+      )
     }
 
     return parts[1]
