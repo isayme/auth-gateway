@@ -1,8 +1,8 @@
 # Auth Gateway
 A service that will handle auth issues.
 
-[![Build Status](https://travis-ci.org/nomorepass/auth-gateway.svg?branch=master)](https://travis-ci.org/nomorepass/auth-gateway)
-[![Coverage Status](https://coveralls.io/repos/github/nomorepass/auth-gateway/badge.svg?branch=master)](https://coveralls.io/github/nomorepass/auth-gateway?branch=master)
+[![Build Status](https://travis-ci.org/isayme/auth-gateway.svg?branch=master)](https://travis-ci.org/isayme/auth-gateway)
+[![Coverage Status](https://coveralls.io/repos/github/isayme/auth-gateway/badge.svg?branch=master)](https://coveralls.io/github/isayme/auth-gateway?branch=master)
 
 ## Usage
 ![arch](./doc/usage.png)

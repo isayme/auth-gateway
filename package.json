@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nomorepass/auth-gateway.git"
+    "url": "git+https://github.com/isayme/auth-gateway.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nomorepass/auth-gateway/issues"
+    "url": "https://github.com/isayme/auth-gateway/issues"
   },
-  "homepage": "https://github.com/nomorepass/auth-gateway#readme",
+  "homepage": "https://github.com/isayme/auth-gateway#readme",
   "dependencies": {
     "app-module-path": "^2.2.0",
     "config": "^1.30.0",
